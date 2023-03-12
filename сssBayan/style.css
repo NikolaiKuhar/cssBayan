@@ -1,14 +1,25 @@
+html {
+    font-family: sans-serif;
+    font-weight: 700;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .wrapper {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 h1 {
     text-align: center;
+}
+
+.css-bayan {
+    border: 5px solid red;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: antiquewhite;
 }
 
 .item input {
@@ -23,7 +34,7 @@ h1 {
 
 .item__header div {
     color: blue;
-    font-weight: 500;
+    transition: all 0.3s ease 0s;
 }
 
 .item__header img {
@@ -70,28 +81,45 @@ h1 {
     }
 }
 
-@media (min-width: 1920px) {
-    html {
-        font-size: 1.5rem;
-    }
-    .css-bayan {
-        width: 40%;
-        cursor: pointer;
-    }
-    .item__header img {
-        opacity: 0;
-        transition: all 0.3s ease 0s;
-    }
+@media (hover: hover) {
     .css-bayan:hover .item__header img {
         opacity: 1;
     }
     .css-bayan:hover .item__header div {
         color: black;
     }
-    .css-bayan:hover .item__input:checked + label .item__header img {
-        opacity: 1;
-    }
+    .item:hover .item__content {
+        height: auto;   
+        visibility: visible;
+        width: 100%;
+    } 
+}
 
+@media (min-width: 1440px) {
+    .css-bayan {
+        width: 40%;
+        cursor: pointer;
+    }
+    .item label {
+        cursor: pointer;
+    }
+    .item__content img {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 1.5rem;
+    }
+    .css-bayan {
+        width: 50%;
+        cursor: pointer;
+    }
+    .item__header img {
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+    }
 }
 
 
