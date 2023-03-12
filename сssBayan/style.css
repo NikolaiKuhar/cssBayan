@@ -18,6 +18,7 @@ h1 {
 .item__header {
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 0;
 }
 
 .item__header div {
@@ -37,11 +38,12 @@ h1 {
     visibility: hidden;
     transition: all 0.3s ease 0s;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .item__content img {
     width: 80%;
-    
 }
 
 .item__input:checked + label .item__header div {
@@ -57,6 +59,18 @@ h1 {
     visibility: visible;
     width: 100%;
 }
+
+@media (min-width: 820px) {
+    html {
+        font-size: 2rem;   
+    }
+    .css-bayan {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
 
 
 
