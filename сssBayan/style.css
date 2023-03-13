@@ -82,6 +82,9 @@ h1 {
 }
 
 @media (hover: hover) {
+    .item__header img {
+        opacity: 0;
+    }
     .css-bayan:hover .item__header img {
         opacity: 1;
     }
@@ -93,6 +96,9 @@ h1 {
         visibility: visible;
         width: 100%;
     } 
+    .item:hover .item__header img {
+        transform: rotate(45deg);
+    }
 }
 
 @media (min-width: 1440px) {
