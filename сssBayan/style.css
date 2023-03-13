@@ -37,7 +37,13 @@ h1 {
     transition: all 0.3s ease 0s;
 }
 
-.item__header img {
+/* .item__header img {
+    flex: 0 0 1rem;
+    height: 1rem;
+    transition: all 0.3s ease 0s;
+} */
+
+.item__header svg {
     flex: 0 0 1rem;
     height: 1rem;
     transition: all 0.3s ease 0s;
@@ -61,7 +67,7 @@ h1 {
     color: black;
 }
 
-.item__input:checked + label .item__header img {
+.item__input:checked + label .item__header svg {
     transform: rotate(45deg);
 }
 
@@ -70,6 +76,8 @@ h1 {
     visibility: visible;
     width: 100%;
 }
+
+
 
 @media (min-width: 820px) {
     html {
@@ -85,7 +93,7 @@ h1 {
     .item__header img {
         opacity: 0;
     }
-    .css-bayan:hover .item__header img {
+    .css-bayan:hover .item__header svg {
         opacity: 1;
     }
     .css-bayan:hover .item__header div {
@@ -96,7 +104,7 @@ h1 {
         visibility: visible;
         width: 100%;
     } 
-    .item:hover .item__header img {
+    .item:hover .item__header svg {
         transform: rotate(45deg);
     }
 }
@@ -122,8 +130,20 @@ h1 {
         width: 50%;
         cursor: pointer;
     }
-    .item__header img {
+    .item__header svg {
         opacity: 0;
         transition: all 0.3s ease 0s;
     }
+}
+
+.item:active label .item__header div {
+    color: blue;
+}
+
+.item:active label {
+    opacity: 0.7;
+}
+
+.item:active label .item__header svg path {
+    fill: blue;
 }
