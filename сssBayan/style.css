@@ -1,0 +1,149 @@
+html {
+    font-family: sans-serif;
+    font-weight: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.css-bayan {
+    border: 0.2rem solid red;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: antiquewhite;
+}
+
+.item input {
+    display: none;
+}
+
+.item__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.item__header div {
+    color: blue;
+    transition: all 0.3s ease 0s;
+}
+
+/* .item__header img {
+    flex: 0 0 1rem;
+    height: 1rem;
+    transition: all 0.3s ease 0s;
+} */
+
+.item__header svg {
+    flex: 0 0 1rem;
+    height: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.item__content {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.item__content img {
+    width: 80%;
+}
+
+.item__input:checked + label .item__header div {
+    color: black;
+}
+
+.item__input:checked + label .item__header svg {
+    transform: rotate(45deg);
+}
+
+.item__input:checked + label .item__content {
+    height: 100%;   
+    visibility: visible;
+    width: 100%;
+}
+
+
+
+@media (min-width: 820px) {
+    html {
+        font-size: 2rem;   
+    }
+    .css-bayan {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (hover: hover) {
+    .item__header img {
+        opacity: 0;
+    }
+    .css-bayan:hover .item__header svg {
+        opacity: 1;
+    }
+    .css-bayan:hover .item__header div {
+        color: black;
+    }
+    .item:hover .item__content {
+        height: 100%;   
+        visibility: visible;
+        width: 100%;
+    } 
+    .item:hover .item__header svg {
+        transform: rotate(45deg);
+    }
+}
+
+@media (min-width: 1440px) {
+    .css-bayan {
+        width: 40%;
+        cursor: pointer;
+    }
+    .item label {
+        cursor: pointer;
+    }
+    .item__content img {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 1.5rem;
+    }
+    .css-bayan {
+        width: 50%;
+        cursor: pointer;
+    }
+    .item__header svg {
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.item:active label .item__header div {
+    color: blue;
+}
+
+.item:active label {
+    opacity: 0.7;
+}
+
+.item:active label .item__header svg path {
+    fill: blue;
+}
